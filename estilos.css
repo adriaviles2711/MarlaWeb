@@ -1,0 +1,461 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #40E0D0, #20B2AA);
+    color: white;
+    min-height: 100vh;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabecera */
+.cabecera {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.titulo {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Secciones */
+.seccion {
+    margin-bottom: 60px;
+}
+
+/* Tarjetas */
+.tarjeta {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    color: #008080;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-titulo {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tarjeta-subtitulo {
+    text-align: center;
+    color: #20B2AA;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.tarjeta-contenido {
+    margin-bottom: 20px;
+}
+
+.tarjeta-contenido p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.mensaje-especial {
+    font-style: italic;
+    border-left: 4px solid #40E0D0;
+    padding-left: 15px;
+}
+
+.tarjeta-pie {
+    text-align: center;
+    color: #20B2AA;
+    font-weight: bold;
+}
+
+/* Tarjetas de Navegación */
+.tarjetas-navegacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta-nav {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 25px;
+    color: #008080;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-nav:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.tarjeta-nav h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.tarjeta-nav .icono {
+    font-size: 3rem;
+    margin: 15px 0;
+}
+
+.tarjeta-nav p:not(.icono) {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.boton {
+    background-color: #40E0D0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #20B2AA;
+}
+
+/* Pie de página */
+.pie-pagina {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.anio {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Cabecera de páginas internas */
+.cabecera-pagina {
+    text-align: center;
+    padding: 20px 0 40px;
+}
+
+.boton-volver {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.boton-volver:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Estilos para el Calendario */
+.selector-meses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tab-mes {
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.tab-mes:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-mes.activo {
+    background-color: white;
+    color: #20B2AA;
+    font-weight: bold;
+}
+
+.contenedor-calendario {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.dia-calendario {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dia-bloqueado {
+    background-color: #ccc;
+    color: #777;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dia-desbloqueado {
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.dia-desbloqueado:hover {
+    transform: scale(1.05);
+}
+
+.dia-desbloqueado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.numero-dia {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #40E0D0;
+    color: white;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Estilos para Quedadas */
+.contenedor-quedadas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tarjeta-quedada {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #008080;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quedada-cabecera {
+    padding: 20px;
+}
+
+.quedada-fecha {
+    color: #20B2AA;
+    margin-bottom: 5px;
+}
+
+.quedada-titulo {
+    font-size: 1.5rem;
+}
+
+.quedada-contenido {
+    padding: 0 20px 20px;
+}
+
+.quedada-descripcion {
+    margin-bottom: 20px;
+}
+
+.quedada-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.foto {
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.foto:hover img {
+    transform: scale(1.05);
+}
+
+.espacio-futuro {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.espacio-futuro h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos para Juegos */
+.contenedor-juegos {
+    min-height: 400px;
+}
+
+.mensaje-juegos {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+.mensaje-juegos h2 {
+    margin-bottom: 15px;
+}
+
+.icono-grande {
+    font-size: 5rem;
+    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 2.5rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+    
+    .tarjeta {
+        padding: 20px;
+    }
+    
+    .tarjeta-titulo {
+        font-size: 1.8rem;
+    }
+    
+    .selector-meses {
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 10px 5px;
+    }
+    
+    .tab-mes {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .contenedor-calendario {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 2rem;
+    }
+    
+    .tarjetas-navegacion {
+        grid-template-columns: 1fr;
+    }
+    
+    .quedada-fotos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos para visualización de imágenes en grande */
+.overlay-imagen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.contenedor-imagen-grande {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contenedor-imagen-grande img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.contenedor-imagen-grande h3 {
+    color: #20B2AA;
+    margin-top: 10px;
+}
+
+.boton-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #40E0D0;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.boton-cerrar:hover {
+    background-color: #20B2AA;
+}
