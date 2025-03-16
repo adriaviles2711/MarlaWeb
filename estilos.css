@@ -402,6 +402,16 @@ body {
     .quedada-fotos {
         grid-template-columns: 1fr;
     }
+
+    .contenedor-contador {
+        flex-direction: column; /* Cambiar a columna */
+        align-items: center; /* Alinear los elementos al centro */
+    }
+    
+    .contador-dias, .cuenta-atras {
+        width: 100% !important; /* Asegura que los elementos ocupen el 100% del ancho disponible */
+        margin-bottom: 15px; /* Espaciado entre los elementos */
+    }
 }
 
 /* Estilos para visualización de imágenes en grande */
