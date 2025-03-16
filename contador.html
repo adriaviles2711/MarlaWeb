@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Días Juntos | Para Mi Amor</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <!-- Cabecera -->
+        <header class="cabecera-pagina">
+            <a href="index.html" class="boton-volver">← Volver al inicio</a>
+            <h1 class="titulo">Contador de Días Juntos</h1>
+            <p class="subtitulo">Celebremos cada día que hemos compartido</p>
+        </header>
+
+        <!-- Contenedor del Contador -->
+        <div class="contenedor-contador">
+            <div class="contador-dias">
+                <h2>Tiempo Juntos</h2>
+                <p id="dias-juntos">0</p>
+                <div>
+                    <button id="btn-dias" class="boton">Días</button>
+                    <button id="btn-meses" class="boton">Meses</button>
+                    <button id="btn-anos" class="boton">Años</button>
+                </div>
+            </div>
+            <div class="cuenta-atras">
+                <h2>Cuenta Atrás</h2>
+                <p id="cuenta-atras">00:00:00</p>
+                <div>
+                    <button id="btn-dia" class="boton">Para el Día</button>
+                    <button id="btn-mes" class="boton">Para el Mes</button>
+                    <button id="btn-ano" class="boton">Para el Año</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie de página -->
+        <footer class="pie-pagina">
+            <p>Hecho con amor para ti</p>
+            <p class="anio">2025</p>
+        </footer>
+    </div>
+
+    <script src="contador.js"></script>
+</body>
+</html>

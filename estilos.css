@@ -459,3 +459,34 @@ body {
 .boton-cerrar:hover {
     background-color: #20B2AA;
 }
+
+.contenedor-contador {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.contador-dias, .cuenta-atras {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    color: #008080;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Ajustar el ancho para que se vea bien en la pantalla */
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #40E0D0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #20B2AA;
+}
